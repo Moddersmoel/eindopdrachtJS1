@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Naamloos document</title>
+</head>
+
+<body>
+	
+	<table>
+		<form>
+			<tr>
+				<td><label for="zin">zin :</label></td>
+				<td><input type="text" placeholder="Javascript rocks !" id="zin"></td>			
+			</tr>
+			<tr>
+				<td><label for="zoek">Zoek  dit woord :</label></td>
+				<td><input type="text" placeholder="best" id="zoek"></td>			
+			</tr>
+			<tr>
+				<td><label for="vervang">Dit woord komt in de plaats van :</label></td>
+				<td><input type="text" placeholder="rules" id="vervang"></td>			
+			</tr>
+			<tr>
+				<td><label for="nieuw">De nieuwe zin :</label></td>
+				<td><input type="text" placeholder="" id="nieuw"></td>			
+			</tr>
+			<tr>
+				<td id="verzend" colspan="2"><button onclick="verzend()">Verzend</button></td>
+			</tr>
+		</form>	
+	</table>
+	
+	
+	
+	<script type="text/javascript">
+		function verzend() { 
+			
+		invoer = "true";
+			
+		if (input.length == 0) {
+			alert("u heeft niks ingegeven !");
+			invoer = "false";
+		}
+			
+		else {
+			function vervang() {
+			var a = document.getElementById("zin").value;
+			var b = document.getElementById("zoek").value;
+			var c = document.getElementById("vervang").value;
+			var x = a.split(" ");
+				for(var i = 0; i < x.length; i++){
+					if(x.indexOf(b) != -1){
+						x = x.replace(b,c);
+					}
+				}
+			document.getElementById("zin").value = x.join(" ");	
+							}			      
+			}	
+	}
+				
+	</script>
+	
+</body>
+</html>
