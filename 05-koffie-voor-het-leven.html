@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Naamloos document</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		function berekenHoeveelheid() {
+			let geboortejaar = prompt('Gelieve uw geboortejaar in te geven aub ?');
+			let leeftijd = prompt('Hoe oud denk je dat je gaat worden ?');
+			let koffie = prompt('Hoeveel tassen koffie drinkt u ?');
+			
+			if (geboortejaar==null || !isNaN(geboortejaar) && (leeftijd ==null || !isNaN(leeftijd)) && (koffie ==null || !isNaN(koffie))) {
+				alert ("Gelieve een waarde, een cijfer, in te brengen bij deze drie velden aub.");
+			}
+		}
+				else {
+					function bereken() {
+						var today = new date ();
+						var age = today.getFullYear() - geboortejaar;
+						document.write (`Je bent nu ${age}`);
+						
+						aantal = ((koffie*365)*age);
+						document.write(`Tegen ${koffie} per dag zal je ${aantal} koppen koffie drinken als je ${leeftijd} jaar zal worden.`);
+					}
+				}				
+	</script>
+</body>
+</html>
