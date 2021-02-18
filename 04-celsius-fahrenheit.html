@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Naamloos document</title>
+</head>
+
+<body>
+	
+	<button onclick="controle()" id="C2F">Omzetten C naar F</button>
+	<button onclick="controle()" id="F2C">Omzetten F naar C</button>
+			
+	<script type="text/javascript">
+		let correct = false;
+		let invoer = prompt ('Hoeveel graden wens je om te zetten ?');
+		
+		function controle() {	
+		
+		let fahrenheit = ((invoer * 9)/5 + 32);	
+		var F2C_ID = document.getElementById("F2C");
+			
+		let celsius = (((invoer - 32)*5)/9);
+		var C2F_ID = document.getElementById("C2F");
+			
+				if (invoer==null) {
+					document.write("u heeft geannulleerd !");
+					correct = true;
+				}
+				else if (invoer.length != 2) {
+					document.write("u moet minstens 2 getallen invoeren !");
+					correct = true;
+				}
+				else if (isNaN(invoer)) {
+					document.write("Dit is geen getal !");
+					correct = true;
+				}		
+					else {
+						let output = document.write("De invoer is in orde !");
+						return output;		
+						} 
+			
+				if (C2F_ID){
+      				document.getElementById("uitkomst").innerHTML = fahrenheit;
+      			}
+
+      			if (F2C_ID){
+      				document.getElementById("uitkomst").innerHTML = Celcius;
+      			}
+		}
+		
+		
+		alert(`<p>"De omzetting is ${uitkomst}"</p>`);
+		controle();
+	</script>
+</body>
+</html>
+
+
