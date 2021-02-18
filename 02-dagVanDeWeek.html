@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Naamloos document</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		let datum = new Date();
+		let vandaag = datum.getDay();
+		let dagBenamingen = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"];
+		
+		if (vandaag=dagBenamingen[0,4]) {
+			document.write(`<p>Het is een werkdag, aan de slag dus</p>`);
+		}
+		else {
+			document.write(`<p>Het is weekend, even bekomen</p>`);
+		}
+	</script>
+</body>
+</html>
